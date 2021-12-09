@@ -21,14 +21,14 @@ jobs:
     - name: Checkout Own Repo to cloud
       uses: actions/checkout@v2
       with: 
-        repository: lowkh/HelloWorldDemoT02
+        repository: ChristopherTeyWeixian/1234
     
     - name: Checkout private repo remotely
       uses: actions/checkout@v2
       with:
-        repository: lowkh2/DevOpsQARepo
+        repository: ChristopherTeyWeixian/1234561
         path: tests
-        token: ${{secrets.QA_REMOTE }}
+        token: ${{secrets.QA_DEVOPS }}
     - name: Linter Check with Flake8
       run: |
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
